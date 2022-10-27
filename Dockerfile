@@ -10,7 +10,7 @@ COPY ./setup.sh ./setup.sh
 COPY ./novia-land-php.ini /usr/local/etc/php/conf.d/novia-land-php.ini
 
 RUN chmod a+x ./setup.sh
-RUN /bin/sh setup.sh
+RUN /bin/bash setup.sh
 
 ENV MW_C_DB_TYPE=mysql
 ENV MW_C_DB_HOST=database:3306

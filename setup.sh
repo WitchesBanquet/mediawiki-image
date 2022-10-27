@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 更新 APT 源
 apt update
 
