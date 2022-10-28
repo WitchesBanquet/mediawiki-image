@@ -2,16 +2,14 @@ pipeline {
     agent {
         label "image-builder"
     }
+    environment {
+        VERSION = sh (
+            returnStdout: true,
+            script: "cat version.txt"
+        )
+        HARBOR_CREDS = credentials("harbor-novia-land-credential")
+    }
     stages {
-        environment {
-            container ("podman") {
-                VERSION = sh (
-                    returnStdout: true,
-                    script: "cat version.txt"
-                )
-                HARBOR_CREDS = credentials("harbor-novia-land-credential")
-            }
-        }
         stage (" Check Version ") {
             steps {
                 echo "Version: ${VERSION}";
@@ -25,13 +23,11 @@ pipeline {
                 }
             }
             post {
-                container ("podman") {
-                    success {
-                        echo "======== Image Build Success ========"
-                    }
-                    failure {
-                        echo "======== Image Build Failed ========"
-                    }
+                success {
+                    echo "======== Image Build Success ========"
+                }
+                failure {
+                    echo "======== Image Build Failed ========"
                 }
             }
         }
@@ -44,13 +40,11 @@ pipeline {
                 }
             }
             post {
-                container ("podman") {
-                    success {
-                        echo "======== Image Push Success ========"
-                    }
-                    failure {
-                        echo "======== Image Push Failed ========"
-                    }
+                success {
+                    echo "======== Image Push Success ========"
+                }
+                failure {
+                    echo "======== Image Push Failed ========"
                 }
             }
         }
