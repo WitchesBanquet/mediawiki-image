@@ -5,16 +5,16 @@ pipeline {
     stages {
         environment {
             container ("podman") {
-                VERSION = "${
+                VERSION = sh (
                     returnStdout: true,
                     script: "cat version.txt"
-                }"
+                )
                 HARBOR_CREDS = credentials("harbor-novia-land-credential")
             }
         }
         stage (" Check Version ") {
             steps {
-                echo "Version: ${VERSION}"
+                echo "Version: ${VERSION}";
             }
         }
         stage(" Build Image ") {
