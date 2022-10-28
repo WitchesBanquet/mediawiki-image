@@ -37,7 +37,7 @@ pipeline {
             steps {
                 container ("podman") {
                     echo "======== Push Image ========"
-                    sh "podman login -u ${HARBOR_CREDS_USR} -p ${HARBOR_CREDS_PSW} harbor.alisaqaq.moe"
+                    sh('podman login -u $HARBOR_CREDS_USR -p $HARBOR_CREDS_PSW harbor.alisaqaq.moe')
                     sh "podman push harbor.alisaqaq.moe/novia-land/mediawiki:${VERSION}"
                 }
             }
