@@ -18,7 +18,7 @@ git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/OpenIDConnect --br
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/timeline --branch REL1_38 --single-branch
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Capiunto --branch REL1_38 --single-branch
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/LabeledSectionTransclusion --branch REL1_38 --single-branch
-git clone https://gerrit.wikimedia.org:29418/mediawiki/extensions/SubPageList3 --branch REL1_38 --single-branch
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/SubPageList3 --branch REL1_38 --single-branch
 git clone https://github.com/Universal-Omega/DynamicPageList3 --branch REL1_38 --single-branch
 
 # EasyTimeline 文件夹
