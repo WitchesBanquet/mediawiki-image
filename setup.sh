@@ -32,3 +32,6 @@ rm -rf /var/lib/apt/lists/*
 # 更新 PHP 包
 cd /var/www/html
 composer update
+
+# 更改权限
+chown -R www-data:www-data /var/www/html/extensions
