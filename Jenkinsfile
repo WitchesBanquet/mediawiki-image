@@ -19,7 +19,7 @@ pipeline {
             steps {
                 container ("podman") {
                     echo "======== Build Image ========"
-                    sh "podman buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t harbor.alisaqaq.moe/novia-land/mediawiki:${VERSION} ."
+                    sh "podman buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t harbor.alisaqaq.moe/novia-land/mediawiki:${VERSION} -f Dockerfile ./"
                 }
             }
             post {
