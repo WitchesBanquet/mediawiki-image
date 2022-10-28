@@ -5,10 +5,10 @@ pipeline {
     stages {
         environment {
             container ("podman") {
-                VERSION = "${sh(
+                VERSION = "${
                     returnStdout: true,
                     script: "cat version.txt"
-                )}"
+                }"
                 HARBOR_CREDS = credentials("harbor-novia-land-credential")
             }
         }
