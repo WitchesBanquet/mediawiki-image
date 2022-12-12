@@ -12,14 +12,14 @@ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 # 获取插件
 cd /var/www/html/extensions
 
-git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/TemplateWizard --branch REL1_38 --single-branch
-git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/PluggableAuth --branch REL1_38 --single-branch
-git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/OpenIDConnect --branch REL1_38 --single-branch
-git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/timeline --branch REL1_38 --single-branch
-git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Capiunto --branch REL1_38 --single-branch
-git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/LabeledSectionTransclusion --branch REL1_38 --single-branch
-git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/SubPageList3 --branch REL1_38 --single-branch
-git clone https://github.com/Universal-Omega/DynamicPageList3 --branch REL1_38 --single-branch
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/TemplateWizard --branch REL1_39 --single-branch
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/PluggableAuth --branch REL1_39 --single-branch
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/OpenIDConnect --branch REL1_39 --single-branch
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/timeline --branch REL1_39 --single-branch
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Capiunto --branch REL1_39 --single-branch
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/LabeledSectionTransclusion --branch REL1_39 --single-branch
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/SubPageList3 --branch REL1_39 --single-branch
+git clone https://github.com/Universal-Omega/DynamicPageList3 --branch master --single-branch
 
 # EasyTimeline 文件夹
 mkdir /var/www/html/images/timeline
