@@ -1,4 +1,4 @@
-FROM docker.io/library/mediawiki:1.39.0
+FROM docker.io/library/mediawiki:1.40.0
 
 WORKDIR /var/www/html
 
