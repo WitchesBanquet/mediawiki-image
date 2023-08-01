@@ -9,4 +9,4 @@ COPY ./novia-land-php.ini /usr/local/etc/php/conf.d/novia-land-php.ini
 RUN chmod a+x ./setup.sh
 RUN /bin/bash setup.sh
 
-CMD ["apache2-foreground"]
+CMD ["php-fpm"]
