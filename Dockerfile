@@ -1,4 +1,4 @@
-FROM docker.io/library/mediawiki:1.39.4-fpm
+FROM docker.io/library/mediawiki:1.39.4
 
 WORKDIR /var/www/html
 
@@ -9,4 +9,4 @@ COPY ./novia-land-php.ini /usr/local/etc/php/conf.d/novia-land-php.ini
 RUN chmod a+x ./setup.sh
 RUN /bin/bash setup.sh
 
-CMD ["php-fpm"]
+CMD ["apache2-foreground"]
